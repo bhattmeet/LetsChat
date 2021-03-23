@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgblack"
+    tools:context=".activity.ChatActivity">
+
+    <include
+        layout="@layout/chat_toolbar"
+        android:id="@+id/chatToolbar"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvChatMessages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/chatToolbar"
+        android:background="@color/black"
+        android:layout_above="@id/linearLayout"
+        android:layout_marginBottom="@dimen/_5sdp"/>
+
+    <RelativeLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightblack"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/_5sdp">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSendFiles"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/ic_files_send"
+            android:layout_margin="@dimen/_3sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"/>
+
+        <EditText
+            android:id="@+id/edtMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type your message"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto"
+            android:padding="@dimen/_10sdp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:focusable="true"
+            android:imeOptions="actionDone"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_toStartOf="@id/btnSend"
+            android:layout_toEndOf="@id/btnSendFiles"
+            android:background="@drawable/bg_edittext"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSend"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@drawable/ic_send"
+            android:layout_margin="@dimen/_5sdp"
+            android:padding="@dimen/_3sdp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

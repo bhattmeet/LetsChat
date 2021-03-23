@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:paddingBottom="@dimen/_1sdp">
+
+<!--    <de.hdodenhof.circleimageview.CircleImageView-->
+<!--        android:id="@+id/imgUser"-->
+<!--        android:layout_width="@dimen/_25sdp"-->
+<!--        android:layout_height="@dimen/_25sdp"-->
+<!--        android:src="@drawable/ic_baseline_person_24"-->
+<!--        android:layout_marginTop="@dimen/_4sdp"-->
+<!--        android:layout_marginStart="@dimen/_3sdp"/>-->
+
+    <RelativeLayout
+        android:id="@+id/rlReceiver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_receiver_chat"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_5sdp">
+
+        <TextView
+            android:id="@+id/txtReceiverMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/bgblack"
+            android:text="Receiver Message"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/roboto_medium"/>
+
+
+        <TextView
+            android:id="@+id/txtReceiverMsgTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/bgblack"
+            android:text="Time"
+            android:textSize="@dimen/_7sdp"
+            android:layout_below="@id/txtReceiverMsg"
+            android:layout_toEndOf="@id/txtReceiverMsg"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:layout_marginBottom="@dimen/_3sdp"
+            android:fontFamily="@font/roboto_medium"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlSender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_sender_chat"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:id="@+id/txtSenderMsgTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:text="Time"
+            android:textSize="@dimen/_7sdp"
+            android:layout_toEndOf="@id/txtSenderMsg"
+            android:layout_below="@id/txtSenderMsg"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:layout_marginBottom="@dimen/_3sdp"
+            android:fontFamily="@font/roboto_medium"/>
+
+        <TextView
+            android:id="@+id/txtSenderMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_sender_chat"
+            android:textColor="@color/white"
+            android:text="Sender Message"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/roboto_medium"/>
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgReceiverMsg"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_alignParentStart="true"
+        android:layout_margin="@dimen/_5sdp"
+        android:scaleType="centerCrop"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgSenderMsg"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/_5sdp"
+        android:scaleType="centerCrop"/>
+
+
+</RelativeLayout>
